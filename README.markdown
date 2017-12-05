@@ -1,15 +1,31 @@
 # The Official pppppppp Swift Style Guide
 
 
-* Lorem ipsum dolor sit amet
-+ Consectetur adipiscing elit
-+ Integer molestie lorem at massa
-+ Facilisis in pretium nisl aliquet
-+ Nulla volutpat aliquam velit
-- Phasellus iaculis neque
-- Purus sodales ultricies
-- Vestibulum laoreet porttitor sem
-- Ac tristique libero volutpat at
-+ Faucibus porta lacus fringilla vel
-+ Aenean sit amet erat nunc
-+ Eget porttitor lorem
+* [Naming](#naming)
+* [Type Inferred Context](#type-inferred-context)
+* [Code Organization](#code-organization)
+* [Unused Code](#unused-code)
+* [Minimal Imports](#minimal-imports)
+* [Spacing](#spacing)
+* [Classes and Structures](#classes-and-structures)
+* [App Delegate](#app-delegate)
+* [Singleton](#singleton)
+* [Use of Self](#use-of-self)
+* [Protocol Conformance](#protocol-conformance)
+* [Computed Properties](#computed-properties)
+* [Function Declarations](#function-declarations)
+* [Closure Expressions](#closure-expressions)
+* [Types](#types)
+* [Constants](#constants)
+* [Optionals](#optionals)
+* [Struct Initializers](#struct-initializers)
+* [Type Inference](#type-inference)
+* [Collections](#collections)
+* [Syntactic Sugar](#syntactic-sugar)
+* [Control Flow](#control-flow)
+* [Statements](#statements)
+* [Semicolons](#semicolons)
+* [Language](#language)
+* [Copyright Statement](#copyright-statement)
+
+## Naming
