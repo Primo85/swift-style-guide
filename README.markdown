@@ -20,6 +20,62 @@ Our guide is a collection of general rules. We have collected these rules to uni
 * [Documentation](#documentation)
 
 ## Naming
+
+Use UpperCamelCase for types and protocols
+
+```swift
+protocol SomeProtocol {
+}
+
+class SomeClass: SomeProtocol {
+}
+
+struct SomeStruct {
+}
+
+enum DaysOfTheWeek {
+}
+
+typealias GridPoint = (Int, Int)
+```
+
+Use camelCase for instances, variables, constants and everything else
+
+```swift
+let someObject = SomeClass()
+var x = 0
+var firstDay: DaysOfTheWeek = .monday
+```
+
+Names should be descriptive and unambiguous.
+
+**Preferred:**
+```swift
+class RoundAnimatingButton: UIButton { /* ... */ }
+```
+
+**Not Preferred:**
+```swift
+class CustomButton: UIButton { /* ... */ }
+```
+
+### Language
+
+Use US English spelling to match Apple's API.
+
+**Preferred:**
+```swift
+let color = "red"
+```
+
+**Not Preferred:**
+```swift
+let colour = "red"
+```
+
+
+
+
 ## Code Formatting
 ## Code Organization
 ## Classes and Structures
