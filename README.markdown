@@ -2,11 +2,36 @@
 
 ## Introduction
 
-Our style is based on Ray Wenderlich Style Guide with some changes of ours. Here you can get link for Ray Wenderlich style:
-
-* [Ray Wenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
+Our guide is a collection of general rules. We have collected these rules to unify and maintain the clarity of the code, written by various developers in our company.
 
 ## Table of Contents
+
+* [Naming](#naming)
+* [Code Formatting](#code-formatting)
+* [Code Organization](#code-organization)
+* [Classes and Structures](#classes-and-structures)
+* [Function Declarations](#function-declarations)
+* [Closure Expressions](#closure-expressions)
+* [Computed Properties](#computed-properties)
+* [Statements](#statements)
+* [Control Flow](#control-flow)
+* [Types](#types)
+* [Comments](#comments)
+* [Documentation](#documentation)
+
+## Naming
+## Code Formatting
+## Code Organization
+## Classes and Structures
+## Function Declarations
+## Closure Expressions
+## Computed Properties
+## Statements
+## Control Flow
+## Types
+## Comments
+## Documentation
+
 
 * [Naming](#naming)
     * [Type Inferred Context](#type-inferred-context)
