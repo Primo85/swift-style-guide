@@ -7,6 +7,7 @@ Our guide is a collection of general rules. We have collected these rules to uni
 ## Table of Contents
 
 * [Naming](#naming)
+    * [Language](#language)
 * [Code Formatting](#code-formatting)
 * [Code Organization](#code-organization)
 * [Classes and Structures](#classes-and-structures)
@@ -24,17 +25,13 @@ Our guide is a collection of general rules. We have collected these rules to uni
 Use UpperCamelCase for types and protocols
 
 ```swift
-protocol SomeProtocol {
-}
+protocol SomeProtocol { /* ... */ }
 
-class SomeClass: SomeProtocol {
-}
+class SomeClass: SomeProtocol { /* ... */ }
 
-struct SomeStruct {
-}
+struct SomeStruct { /* ... */ }
 
-enum DaysOfTheWeek {
-}
+enum DaysOfTheWeek { /* ... */ }
 
 typealias GridPoint = (Int, Int)
 ```
@@ -43,7 +40,9 @@ Use camelCase for instances, variables, constants and everything else
 
 ```swift
 let someObject = SomeClass()
+
 var x = 0
+
 var firstDay: DaysOfTheWeek = .monday
 ```
 
@@ -73,20 +72,52 @@ let color = "red"
 let colour = "red"
 ```
 
-
-
+*[Table of Contents](#table-of-contents)
 
 ## Code Formatting
+
+*[Table of Contents](#table-of-contents)
+
 ## Code Organization
+
+*[Table of Contents](#table-of-contents)
+
 ## Classes and Structures
+
+*[Table of Contents](#table-of-contents)
+
 ## Function Declarations
+
+*[Table of Contents](#table-of-contents)
+
 ## Closure Expressions
+
+*[Table of Contents](#table-of-contents)
+
 ## Computed Properties
+
+*[Table of Contents](#table-of-contents)
+
 ## Statements
+
+*[Table of Contents](#table-of-contents)
+
 ## Control Flow
+
+*[Table of Contents](#table-of-contents)
+
 ## Types
+
+*[Table of Contents](#table-of-contents)
+
 ## Comments
+
+*[Table of Contents](#table-of-contents)
+
 ## Documentation
+
+*[Table of Contents](#table-of-contents)
+
 
 
 * [Naming](#naming)
