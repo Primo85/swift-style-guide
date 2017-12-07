@@ -22,8 +22,7 @@ Our guide is a collection of general rules. We have collected these rules to uni
 
 ## Naming
 
-Use UpperCamelCase for types and protocols
-
+Use UpperCamelCase for types and protocols.
 ```swift
 protocol SomeProtocol { /* ... */ }
 
@@ -36,8 +35,7 @@ enum DaysOfTheWeek { /* ... */ }
 typealias GridPoint = (Int, Int)
 ```
 
-Use camelCase for instances, variables, constants and everything else
-
+Use camelCase for instances, variables, constants and everything else.
 ```swift
 let someObject = SomeClass()
 
@@ -58,18 +56,36 @@ class RoundAnimatingButton: UIButton { /* ... */ }
 class CustomButton: UIButton { /* ... */ }
 ```
 
-### Language
+Include type information in constant or variable names when it is not obvious otherwise.
+
+**Preferred:**
+```swift
+
+```
+
+**Not Preferred:**
+```swift
+
+```
 
 Use US English spelling to match Apple's API.
 
 **Preferred:**
 ```swift
 let color = "red"
+
+var grayButton: UIButton!
+
+func setBehavior() { /* ... */ }
 ```
 
 **Not Preferred:**
 ```swift
 let colour = "red"
+
+var greyButton: UIButton!
+
+func setBehaviour() { /* ... */ }
 ```
 
 *[Table of Contents](#table-of-contents)
