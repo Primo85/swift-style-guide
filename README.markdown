@@ -131,9 +131,126 @@ class URLFinder { /* ... */ }
 
 ## Code Formatting
 
+### Spacing
+
+Always use 4 space indentations, and remember to select the whole code after finishing the work and press ctrl + i.
+It will automatically set all the indents in the right positions.
+
+Method braces and other braces (if/else/switch/while etc.) always open on the same line as the statement but close on a new line.
+
+**Preferred:**
+```swift
+func myMethod() {
+    // body of function
+}
+
+if isRainig {
+    // take ambrela
+} else {
+    // you don't need it
+}
+```
+
+**Not Preferred:**
+```swift
+func myMethod()
+{
+// body of function
+}
+
+if isRainig {
+// take ambrela }
+else { // you don't need it }
+```
+
+**Exception:**
+When You use guard and need just return in case condition fails, open braces on the same line and close on the same line as the statement.
+```swift
+guard code.isClean else { return }
+
+guard someCondotion else {
+    // if you need
+    // aditional code here
+    return
+}
+```
+
+Colons always have no space on the left and one space on the right. Exceptions are the ternary operator ? :, empty dictionary [:] and #selector syntax for unnamed parameters (_:).
+
+**Preferred:**
+```swift
+class SomeClass: BaseClass {
+    init(data: [String: Int]) {
+        self.data = data
+    }
+    var data: [String: Int] = ["A": 1, "B": 2]
+}
+```
+
+**Not Preferred:**
+```swift
+class SomeClass :BaseClass {
+    init(data:[String:Int]) {
+        self.data = data
+    }
+    var data : [String : Int] = ["A":1, "B":2]
+}
+```
+### Computed Properties
+For conciseness, if a computed property is read-only, omit the get clause. The get clause is required only when a set clause is provided.
+
+**Preferred:**
+```swift
+var squareArea: Double {
+    return sideOfSquare  * sideOfSquare
+}
+```
+
+**Not Preferred:**
+```swift
+var squareArea: Double {
+    get {
+        return sideOfSquare  * sideOfSquare
+    }
+}
+```
+
+
+
 *[Table of Contents](#table-of-contents)
 
 ## Code Organization
+
+### Minimal Imports
+
+Keep imports minimal. For example, don't import UIKit when importing Foundation will suffice.
+
+### Protocol Conformance
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
+
+**Preferred:**
+```swift
+class MyViewController: UIViewController {
+    // class stuff here
+}
+
+// MARK: - UITableViewDataSource
+extension MyViewController: UITableViewDataSource {
+    // table view data source methods
+}
+
+// MARK: - UIScrollViewDelegate
+extension MyViewController: UIScrollViewDelegate {
+    // scroll view delegate methods
+}
+```
+
+**Not Preferred:**
+```swift
+class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+    // all methods
+}
+```
 
 *[Table of Contents](#table-of-contents)
 
