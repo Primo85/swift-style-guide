@@ -175,7 +175,7 @@ guard someCondotion else {
 }
 ```
 
-Colons always have no space on the left and one space on the right. Exceptions are the ternary operator ? :, empty dictionary [:] and #selector syntax for unnamed parameters (_:).
+Colons always have no space on the left and one space on the right. Exceptions are empty dictionary [:] and #selector syntax for unnamed parameters (_:).
 
 **Preferred:**
 ```swift
