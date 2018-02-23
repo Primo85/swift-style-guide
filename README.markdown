@@ -6,7 +6,7 @@ Our guide is a collection of general rules. We have collected these rules to uni
 
 ## Table of Contents
 
-* [Naming](#naming)
+* [Naming And Syntax](#naming-and-syntax)
 * [Code Formatting](#code-formatting)
 * [Code Organization](#code-organization)
 * [Classes and Structures](#classes-and-structures)
@@ -19,7 +19,7 @@ Our guide is a collection of general rules. We have collected these rules to uni
 * [Comments](#comments)
 * [Documentation](#documentation)
 
-## Naming
+## Naming And Syntax
 
 Use UpperCamelCase for types and protocols.
 ```swift
@@ -125,6 +125,71 @@ let urlString = "www.applover.pl"
 let chatUserID: Int = 13
 // Prefer URLFinder to UrlFinder
 class URLFinder { /* ... */ }
+```
+
+Use compiler inferred context to write shorter, clear code.
+
+**Preferred:**
+```swift
+let selector = #selector(viewDidLoad)
+view.backgroundColor = .red
+let toView = context.view(forKey: .to)
+let view = UIView(frame: .zero)
+```
+
+**Not Preferred:**
+```swift
+let selector = #selector(ViewController.viewDidLoad)
+view.backgroundColor = UIColor.red
+let toView = context.view(forKey: UITransitionContextViewKey.to)
+let view = UIView(frame: CGRect.zero)
+```
+
+For empty arrays and dictionaries, use type annotation.
+
+**Preferred:**
+```swift
+var names: [String] = []
+var lookup: [String: Int] = [:]
+```
+
+**Not Preferred:**
+```swift
+var names = [String]()
+var lookup = [String: Int]()
+```
+
+Prefer compact code and let the compiler infer the type for constants or variables of single instances. Type inference is also appropriate for small (non-empty) arrays and dictionaries. When required, specify the specific type such as CGFloat or Int16.
+
+**Preferred:**
+```swift
+let message = "awsome"
+let currentBounds = computeViewBounds()
+let distance = 5.5 // of course it's Double
+let viewHeight: CGFloat = 200.0
+let score = -5  // of course it's Int
+let rowNumber: UInt = 7
+var names = ["Mic", "Sam", "Christine"]
+```
+
+**Not Preferred:**
+```swift
+let message: String = "awsome"
+let currentBounds: CGRect = computeViewBounds()
+let distance: Double = 5.5
+let score: Int = -5
+```
+
+When creating custom delegate methods, an unnamed first parameter should be the delegate source. (UIKit contains numerous examples of this.)
+
+**Preferred:**
+```swift
+func rangeSlider(_ rangeSlider: RangeSlider, didChangeRange range: (Int, Int))
+```
+
+**Not Preferred:**
+```swift
+func didChangeRange(rangeSlider: RangeSlider, range: (Int, Int))
 ```
 
 *[Table of Contents](#table-of-contents)
@@ -252,6 +317,10 @@ class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDel
 }
 ```
 
+### Final
+
+Marking classes or members as final in tutorials can distract from the main topic and is not required. Nevertheless, use of final can sometimes clarify your intent and is worth the cost. In the below example, Box has a particular purpose and customization in a derived class is not intended. Marking it final makes that clear.
+
 *[Table of Contents](#table-of-contents)
 
 ## Classes and Structures
@@ -283,6 +352,10 @@ class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDel
 *[Table of Contents](#table-of-contents)
 
 ## Comments
+
+When they are needed, use comments to explain why a particular piece of code does something. Comments must be kept up-to-date or deleted.
+
+Avoid block comments inline with code, as the code should be as self-documenting as possible. Exception: This does not apply to those comments used to generate documentation.
 
 *[Table of Contents](#table-of-contents)
 
