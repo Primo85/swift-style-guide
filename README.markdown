@@ -228,7 +228,7 @@ if isRainig {
 else { // you don't need it }
 ```
 
-**Exception:**
+**Exception1:**
 When You use guard and need just return in case condition fails, open braces on the same line and close on the same line as the statement.
 ```swift
 guard code.isClean else { return }
@@ -238,6 +238,12 @@ guard someCondotion else {
     // aditional code here
     return
 }
+```
+
+**Exception2:**
+For single-expression closures where the context is clear:
+```swift
+tableOfValues.sort { $0 > $1 }
 ```
 
 Colons always have no space on the left and one space on the right. Exceptions are empty dictionary [:] and #selector syntax for unnamed parameters (_:).
@@ -333,6 +339,44 @@ Marking classes or members as final in tutorials can distract from the main topi
 
 ## Closure Expressions
 
+Use trailing closure syntax only if there's a single closure expression parameter at the end of the argument list. Give the closure parameters descriptive names.
+
+**Preferred:**
+```swift
+UIView.animate(withDuration: 1.0) {
+self.myView.alpha = 0
+}
+
+UIView.animate(withDuration: 1.0, animations: {
+self.myView.alpha = 0
+}, completion: { finished in
+self.myView.removeFromSuperview()
+})
+```
+
+**Not Preferred:**
+```swift
+UIView.animate(withDuration: 1.0, animations: {
+self.myView.alpha = 0
+}) { f in
+self.myView.removeFromSuperview()
+}
+```
+
+For single-expression closures where the context is clear:
+
+**Preferred:**
+```swift
+tableOfValues.sort { $0 > $1 }
+```
+
+**Not Preferred:**
+```swift
+tableOfValues.sort { a, b in
+a > b
+}
+```
+
 *[Table of Contents](#table-of-contents)
 
 ## Computed Properties
@@ -362,4 +406,15 @@ Avoid block comments inline with code, as the code should be as self-documenting
 ## Documentation
 
 *[Table of Contents](#table-of-contents)
+
+
+**Preferred:**
+```swift
+
+```
+
+**Not Preferred:**
+```swift
+
+```
 
