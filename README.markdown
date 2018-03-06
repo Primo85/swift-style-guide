@@ -217,8 +217,10 @@ Method braces and other braces (if/else/switch/while etc.) always open on the sa
 
 **Preferred:**
 ```swift
-func myMethod() {
-    // body of function
+class MyClass {
+    func myMethod() {
+        // body of function
+    }
 }
 
 if isRainig {
@@ -230,10 +232,11 @@ if isRainig {
 
 **Not Preferred:**
 ```swift
-func myMethod()
+class MyClass
 {
-// body of function
-}
+    func myMethod() {
+        // body of function
+} }
 
 if isRainig
 {
